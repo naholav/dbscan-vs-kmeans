@@ -60,7 +60,7 @@ def visualize_metrics(silhouette, davies_bouldin):
 
 
 # 1. Load Data
-file_path = '/Users/ardamulayim/Downloads/pricerunner_aggregate 2.csv'
+file_path = 'path'
 data = load_data(file_path)
 
 # 2. Clean column names (if necessary)
