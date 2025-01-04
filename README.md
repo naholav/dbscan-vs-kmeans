@@ -73,24 +73,5 @@ This repository demonstrates the use of clustering algorithms, specifically K-Me
 
 ---
 
-## **Project Structure**
 
-project_directory/
-├── images/
-│   ├── non-standardize_k-means_vs_dbscan.png
-│   ├── non-standardize_vs_standardize.png
-│   ├── standardize_k-means_vs_dbscan.png
-│   ├── dbscan.png
-│   ├── k-means_non-standardized.png
-│   ├── k-means_standardize.png
-├── data/
-│   ├── pricerunner_aggregate 2.csv
-│   ├── non-standardize_k-means_clustered_data.csv
-│   ├── standardize_k-means_clustered_data.csv
-│   ├── dbscan_clustered_data.csv
-├── non-standardize_k-means.py
-├── standardize_k-means.py
-├── dbscan.py
-├── requirements.txt
-└── README.md
 
