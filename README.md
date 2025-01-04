@@ -67,3 +67,7 @@ This repository demonstrates the use of clustering algorithms, specifically K-Me
    ```bash
    git clone https://github.com/<your_username>/<repository_name>.git
    cd <repository_name>
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+
