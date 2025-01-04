@@ -71,17 +71,4 @@ This repository demonstrates the use of clustering algorithms, specifically K-Me
    ```bash
    pip install -r requirements.txt
 
-   ---
-
-   ## **How to Run**
-
-### **1. Running Non-Standardized K-Means**
-Execute the script:
-```bash
-python non-standardize_k-means.py
-
-`file_path = 'path_to_your_file'`  <!-- Replace with the path to your input dataset -->
-
-`output_file_path = 'path_to_output_file'`  <!-- Replace with the path where the results will be saved -->
-
 
