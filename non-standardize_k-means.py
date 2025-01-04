@@ -60,7 +60,7 @@ def visualize_metrics(silhouette, davies_bouldin):
 
 
 # 1. Load Data
-file_path = 'path'
+file_path = 'path'  # Path to your file
 data = load_data(file_path)
 
 # 2. Clean column names (if necessary)
