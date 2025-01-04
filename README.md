@@ -1,62 +1,110 @@
-Clustering Algorithms Comparison: K-Means and DBSCAN
+# **Clustering and Data Analysis**
 
-This repository demonstrates clustering algorithms, including K-Means (both standardized and non-standardized) and DBSCAN, on a dataset. Performance metrics such as Silhouette Score and Davies-Bouldin Index are visualized and compared.
+This repository contains a project that focuses on clustering and analyzing a dataset using various clustering algorithms such as K-Means and DBSCAN. The project also includes visualizations and performance metrics to compare the effectiveness of these algorithms.
 
-Repository Structure
+---
 
-1. Python Scripts
-non-standardize_k-means.py: Applies K-Means clustering without standardizing the data.
-standardize_k-means.py: Applies K-Means clustering with standardized data.
-dbscan.py: Implements DBSCAN clustering.
-2. Image Folder
-Contains all visualization results, including:
+## **Project Overview**
 
-dbscan.png: Scatter plot visualization for DBSCAN clustering.
-k-means_non-standardized.png: Scatter plot for non-standardized K-Means clustering.
-k-means_standardize.png: Scatter plot for standardized K-Means clustering.
-non-standardize_k-means_vs_dbscan.png: Performance metrics comparison between non-standardized K-Means and DBSCAN.
-non-standardize_vs_standardize.png: Performance comparison of non-standardized vs standardized K-Means.
-standardize_k-means_vs_dbscan.png: Performance metrics comparison between standardized K-Means and DBSCAN.
-3. Data Folder
-Includes the following files:
+The project provides implementations of two clustering algorithms:
+1. **K-Means**: Both standardized and non-standardized versions.
+2. **DBSCAN**: Density-Based Spatial Clustering of Applications with Noise.
 
-non-standardize_k-means_clustered_data.csv: Clustered results for non-standardized K-Means.
-standardize_k-means_clustered_data.csv: Clustered results for standardized K-Means.
-dbscan_clustered_data.csv: Clustered results for DBSCAN.
-pricerunner_aggregate 2.csv: Original dataset used for clustering.
-How to Use
+The repository contains Python scripts, sample datasets, and visualizations to analyze and understand the clustering results.
 
-Prerequisites
-Make sure the following Python libraries are installed:
+---
 
-numpy
-pandas
-matplotlib
-seaborn
-sklearn
-Install the requirements using:
+## **Folder Structure**
 
-pip install numpy pandas matplotlib seaborn scikit-learn
-Running the Scripts
-Set File Paths
-Update the following variables in each script before running:
-file_path: Path to the input CSV file (e.g., pricerunner_aggregate 2.csv).
-output_file_path: Path where the clustered results will be saved.
-Example:
+project/ ├── data/ │ ├── pricerunner_aggregate_2.csv │ ├── non-standardize_k-means_clustered_data.csv │ ├── standardize_k-means_clustered_data.csv │ ├── dbscan_clustered_data.csv ├── images/ │ ├── k-means_non-standardized.png │ ├── k-means_standardize.png │ ├── dbscan.png │ ├── non-standardize_k-means_vs_dbscan.png │ ├── non-standardize_vs_standardize.png │ ├── standardize_k-means_vs_dbscan.png ├── non-standardize_k-means.py ├── standardize_k-means.py ├── dbscan.py ├── requirements.txt ├── README.md
 
-file_path = 'data/pricerunner_aggregate 2.csv'  # Input file
-output_file_path = 'data/standardize_k-means_clustered_data.csv'  # Output file
-Run the Scripts
-Execute any of the Python scripts to generate clustered results and visualizations:
+
+---
+
+## **Requirements**
+
+To run this project, you need the following Python libraries:
+
+- `numpy`
+- `pandas`
+- `matplotlib`
+- `seaborn`
+- `scikit-learn`
+
+All dependencies are listed in the `requirements.txt` file.
+
+---
+
+## **How to Install Dependencies**
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd project/
+Install dependencies using the requirements.txt file:
+pip install -r requirements.txt
+Python Scripts
+
+1. non-standardize_k-means.py
+Implements the K-Means clustering algorithm without standardizing the data.
+Outputs the clustering results and performance metrics (Silhouette Score and Davies-Bouldin Index).
+Saves the clustered data as non-standardize_k-means_clustered_data.csv.
+2. standardize_k-means.py
+Implements the K-Means clustering algorithm with standardized data.
+Outputs the clustering results and performance metrics (Silhouette Score and Davies-Bouldin Index).
+Saves the clustered data as standardize_k-means_clustered_data.csv.
+3. dbscan.py
+Implements the DBSCAN clustering algorithm.
+Outputs the clustering results and performance metrics (Silhouette Score and Davies-Bouldin Index).
+Saves the clustered data as dbscan_clustered_data.csv.
+Datasets
+
+The data/ folder contains the following files:
+
+pricerunner_aggregate_2.csv: The original dataset used for clustering.
+non-standardize_k-means_clustered_data.csv: Clustered data from the non-standardized K-Means algorithm.
+standardize_k-means_clustered_data.csv: Clustered data from the standardized K-Means algorithm.
+dbscan_clustered_data.csv: Clustered data from the DBSCAN algorithm.
+Visualizations
+
+The images/ folder contains visualizations comparing the clustering results:
+
+k-means_non-standardized.png: Results of non-standardized K-Means clustering.
+k-means_standardize.png: Results of standardized K-Means clustering.
+dbscan.png: Results of DBSCAN clustering.
+non-standardize_k-means_vs_dbscan.png: Comparison of non-standardized K-Means and DBSCAN.
+non-standardize_vs_standardize.png: Comparison of non-standardized and standardized K-Means.
+standardize_k-means_vs_dbscan.png: Comparison of standardized K-Means and DBSCAN.
+How to Run the Scripts
+
+Run non-standardize K-Means:
 python non-standardize_k-means.py
+Modify file_path in the script to point to the dataset location.
+Modify output_file_path to specify the save location for clustered data.
+Run standardize K-Means:
 python standardize_k-means.py
+Modify file_path in the script to point to the dataset location.
+Modify output_file_path to specify the save location for clustered data.
+Run DBSCAN:
 python dbscan.py
-View Results
-Clustered data will be saved in the data folder, and visualizations will be stored in the images folder.
-Performance Comparison
+Modify file_path in the script to point to the dataset location.
+Modify output_file_path to specify the save location for clustered data.
+Key Insights
 
-This project evaluates clustering algorithms using the following metrics:
+K-Means Clustering
+Standardizing the data before applying K-Means improved clustering performance, as indicated by better Silhouette Scores and lower Davies-Bouldin Index values.
+Visualizations highlight clear differences in cluster separability between standardized and non-standardized data.
+DBSCAN Clustering
+DBSCAN effectively identifies noise points and clusters based on density.
+Requires careful tuning of eps and min_samples for optimal results.
+Compared to K-Means, DBSCAN is more robust to outliers but may struggle with high-dimensional data.
+Algorithm Comparison
+K-Means:
+Performs well with spherical clusters.
+Sensitive to scaling and outliers.
+DBSCAN:
+Excels in identifying arbitrary-shaped clusters.
+Robust to outliers but parameter-sensitive.
+Contributing
 
-Silhouette Score: Measures how similar an object is to its own cluster compared to other clusters.
-Davies-Bouldin Index: Evaluates the average similarity ratio between each cluster and its most similar cluster. Lower values indicate better clustering.
-Performance comparisons are visualized in the images folder.
+Contributions are welcome! Please fork the repository and submit a pull request for any bug fixes, enhancements, or additional features.
