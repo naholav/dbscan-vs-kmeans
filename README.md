@@ -71,4 +71,6 @@ This repository demonstrates the use of clustering algorithms, specifically K-Me
    ```bash
    pip install -r requirements.txt
 
+---
 
+## **Project Structure**
