@@ -1,14 +1,24 @@
 # **Clustering Algorithms Comparison**
 
-This repository provides a framework for clustering analysis using **K-Means** and **DBSCAN** algorithms. The project compares their performance on standardized and non-standardized datasets. Additionally, it generates visualizations to highlight the impact of standardization on clustering performance.
+This repository provides a framework for clustering analysis using **K-Means** and **DBSCAN** algorithms. The project demonstrates the effect of data standardization on clustering performance and includes visualizations for deeper insights into the results.
+
+---
+
+## **Project Overview**
+
+This project evaluates the performance of clustering algorithms on standardized and non-standardized datasets. Key objectives include:
+
+1. **Clustering Analysis**: Compare the performance of K-Means and DBSCAN.
+2. **Impact of Standardization**: Highlight how standardizing the data affects clustering results.
+3. **Visualizations**: Generate plots to visualize clusters and performance metrics.
 
 ---
 
 ## **Datasets**
 
 ### **1. `pricerunner_aggregate 2.csv`**
-- Contains information about products and merchants used for clustering.
-- Key columns:
+- Contains product and merchant information used for clustering.
+- **Key Columns**:
   - `Product ID`
   - `Merchant ID`
 
@@ -22,34 +32,35 @@ This repository provides a framework for clustering analysis using **K-Means** a
 ## **Python Scripts**
 
 ### **1. `non-standardize_k-means.py`**
-- Implements K-Means clustering without standardizing the data.
-- Outputs clustering performance metrics and visualizations.
+- Performs K-Means clustering without standardizing the data.
+- Outputs clustering metrics and visualizations.
 
 ### **2. `standardize_k-means.py`**
-- Implements K-Means clustering with standardized data.
-- Highlights the improvement in clustering performance after standardization.
+- Performs K-Means clustering on standardized data.
+- Highlights the impact of standardization on clustering.
 
 ### **3. `dbscan.py`**
-- Applies the DBSCAN clustering algorithm.
-- Includes performance metrics for non-standardized data.
+- Implements DBSCAN clustering algorithm.
+- Includes clustering metrics and visualizations for non-standardized data.
 
 ---
 
 ## **Performance Metrics**
 
-### **Silhouette Score**
-- Measures how similar an object is to its cluster compared to other clusters.
-- Range: `-1` (poor clustering) to `1` (ideal clustering).
+### **1. Silhouette Score**
+- Measures the similarity of points within the same cluster.
+- **Range**: `-1` (poor clustering) to `1` (ideal clustering).
 
-### **Davies-Bouldin Index**
+### **2. Davies-Bouldin Index**
 - Evaluates the compactness and separation of clusters.
-- Lower values indicate better clustering.
+- **Lower values** indicate better clustering performance.
 
 ---
 
 ## **Visualizations**
 
 ### Key Visualizations:
+
 1. **K-Means vs DBSCAN Performance (Non-Standardized)**:
    ![Non-Standardized K-Means vs DBSCAN](images/non-standardize_k-means_vs_dbscan.png)
 
@@ -63,64 +74,54 @@ This repository provides a framework for clustering analysis using **K-Means** a
 
 ## **Installation**
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/<your_username>/<repository_name>.git
-   cd <repository_name>
-   ```
+### **Step 1: Clone the Repository**
+```bash
+git clone https://github.com/<your_username>/<repository_name>.git
+cd <repository_name>
+```
 
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### **Step 2: Install Dependencies**
+Install the required Python libraries:
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
 ## **How to Run**
 
 ### **1. Running Non-Standardized K-Means**
-
-Execute the script:
-```bash
-python non-standardize_k-means.py
-```
-Ensure to specify the input file path and output file path within the script:
-```python
-file_path = 'path_to_your_file'  # Replace with the path to your input dataset
-output_file_path = 'path_to_output_file'  # Replace with the path where the results will be saved
-```
+- Execute the script:
+  ```bash
+  python non-standardize_k-means.py
+  ```
+- Ensure the input file path and output file path are correctly set within the script:
+  ```python
+  file_path = 'path_to_your_file'  # Replace with the path to your input dataset
+  output_file_path = 'path_to_output_file'  # Replace with the path where the results will be saved
+  ```
 
 ### **2. Running Standardized K-Means**
-
-Execute the script:
-```bash
-python standardize_k-means.py
-```
-Ensure to specify the input file path and output file path within the script:
-```python
-file_path = 'path_to_your_file'  # Replace with the path to your input dataset
-output_file_path = 'path_to_output_file'  # Replace with the path where the results will be saved
-```
+- Execute the script:
+  ```bash
+  python standardize_k-means.py
+  ```
+- Ensure the input file path and output file path are correctly set within the script:
+  ```python
+  file_path = 'path_to_your_file'  # Replace with the path to your input dataset
+  output_file_path = 'path_to_output_file'  # Replace with the path where the results will be saved
+  ```
 
 ### **3. Running DBSCAN**
-
-Execute the script:
-```bash
-python dbscan.py
-```
-Ensure to specify the input file path and output file path within the script:
-```python
-file_path = 'path_to_your_file'  # Replace with the path to your input dataset
-output_file_path = 'path_to_output_file'  # Replace with the path where the results will be saved
-```
-
----
-
-## **Key Notes**
-
-- The repository contains a `requirements.txt` file listing all necessary Python libraries. Make sure to install the dependencies before running any scripts.
-- Visualizations generated by the scripts are automatically saved in the `images` folder.
-- Replace all instances of `path_to_your_file` and `path_to_output_file` in the scripts with the correct file paths for your dataset and desired output.
+- Execute the script:
+  ```bash
+  python dbscan.py
+  ```
+- Ensure the input file path and output file path are correctly set within the script:
+  ```python
+  file_path = 'path_to_your_file'  # Replace with the path to your input dataset
+  output_file_path = 'path_to_output_file'  # Replace with the path where the results will be saved
+  ```
 
 ---
 
@@ -147,3 +148,12 @@ project_directory/
 └── README.md
 ```
 
+---
+
+## **Key Notes**
+
+1. The repository contains a `requirements.txt` file listing all necessary Python libraries. Make sure to install the dependencies before running any scripts.
+2. Visualizations generated by the scripts are automatically saved in the `images/` folder.
+3. Replace all instances of `'path_to_your_file'` and `'path_to_output_file'` in the scripts with the correct file paths for your dataset and desired output.
+
+---
