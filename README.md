@@ -1,110 +1,93 @@
-# **Clustering and Data Analysis**
+# **K-Means and DBSCAN Clustering Performance Analysis**
 
-This repository contains a project that focuses on clustering and analyzing a dataset using various clustering algorithms such as K-Means and DBSCAN. The project also includes visualizations and performance metrics to compare the effectiveness of these algorithms.
-
----
-
-## **Project Overview**
-
-The project provides implementations of two clustering algorithms:
-1. **K-Means**: Both standardized and non-standardized versions.
-2. **DBSCAN**: Density-Based Spatial Clustering of Applications with Noise.
-
-The repository contains Python scripts, sample datasets, and visualizations to analyze and understand the clustering results.
+This repository contains Python implementations for clustering analysis using **K-Means** and **DBSCAN** algorithms. It demonstrates the effects of data standardization on clustering performance and provides visual and statistical insights into the results.
 
 ---
 
-## **Folder Structure**
+## **Project Goals**
 
-project/ ├── data/ │ ├── pricerunner_aggregate_2.csv │ ├── non-standardize_k-means_clustered_data.csv │ ├── standardize_k-means_clustered_data.csv │ ├── dbscan_clustered_data.csv ├── images/ │ ├── k-means_non-standardized.png │ ├── k-means_standardize.png │ ├── dbscan.png │ ├── non-standardize_k-means_vs_dbscan.png │ ├── non-standardize_vs_standardize.png │ ├── standardize_k-means_vs_dbscan.png ├── non-standardize_k-means.py ├── standardize_k-means.py ├── dbscan.py ├── requirements.txt ├── README.md
+The primary goals of this project are:
+1. **Clustering Algorithm Comparison**:
+   - Evaluate the performance of **K-Means** and **DBSCAN** algorithms on a dataset.
+2. **Impact of Standardization**:
+   - Investigate how data standardization influences clustering outcomes.
+3. **Performance Metrics**:
+   - Analyze clustering performance using **Silhouette Score** and **Davies-Bouldin Index**.
+4. **Visualization**:
+   - Provide clear and informative visualizations of clustering results.
+
+---
+
+## **Repository Structure**
+project_directory/ ├── data/ │ ├── pricerunner_aggregate 2.csv │ ├── non-standardize_k-means_clustered_data.csv │ ├── standardize_k-means_clustered_data.csv │ ├── dbscan_clustered_data.csv ├── images/ │ ├── k-means_non-standardized.png │ ├── k-means_standardize.png │ ├── dbscan.png │ ├── non-standardize_k-means_vs_dbscan.png │ ├── non-standardize_vs_standardize.png │ ├── standardize_k-means_vs_dbscan.png ├── non-standardize_k-means.py ├── standardize_k-means.py ├── dbscan.py ├── requirements.txt └── README.md
 
 
 ---
 
-## **Requirements**
+## **Datasets**
 
-To run this project, you need the following Python libraries:
+### **1. `pricerunner_aggregate 2.csv`**
+- Contains information about products and merchants used for clustering.
+- Key columns:
+  - `Product ID`
+  - `Merchant ID`
 
-- `numpy`
-- `pandas`
-- `matplotlib`
-- `seaborn`
-- `scikit-learn`
-
-All dependencies are listed in the `requirements.txt` file.
+### **2. Clustered Data Outputs**
+- **`non-standardize_k-means_clustered_data.csv`**: Results of K-Means clustering without standardization.
+- **`standardize_k-means_clustered_data.csv`**: Results of K-Means clustering with standardization.
+- **`dbscan_clustered_data.csv`**: Results of DBSCAN clustering.
 
 ---
 
-## **How to Install Dependencies**
+## **Python Scripts**
 
-1. Clone the repository:
+### **1. `non-standardize_k-means.py`**
+- Implements K-Means clustering without standardizing the data.
+- Outputs clustering performance metrics and visualizations.
+
+### **2. `standardize_k-means.py`**
+- Implements K-Means clustering with standardized data.
+- Highlights the improvement in clustering performance after standardization.
+
+### **3. `dbscan.py`**
+- Applies the DBSCAN clustering algorithm.
+- Includes performance metrics for non-standardized data.
+
+---
+
+## **Performance Metrics**
+
+### **Silhouette Score**
+- Measures how similar an object is to its cluster compared to other clusters.
+- Range: `-1` (poor clustering) to `1` (ideal clustering).
+
+### **Davies-Bouldin Index**
+- Evaluates the compactness and separation of clusters.
+- Lower values indicate better clustering.
+
+---
+
+## **Visualizations**
+
+### Key Visualizations:
+1. **K-Means vs DBSCAN Performance (Non-Standardized)**:
+   ![Non-Standardized K-Means vs DBSCAN](images/non-standardize_k-means_vs_dbscan.png)
+
+2. **Impact of Standardization on K-Means**:
+   ![Standardized vs Non-Standardized K-Means](images/non-standardize_vs_standardize.png)
+
+3. **K-Means vs DBSCAN Performance (Standardized)**:
+   ![Standardized K-Means vs DBSCAN](images/standardize_k-means_vs_dbscan.png)
+
+---
+
+## **Installation**
+
+1. Clone this repository:
    ```bash
-   git clone <repository_url>
-   cd project/
-Install dependencies using the requirements.txt file:
-pip install -r requirements.txt
-Python Scripts
-
-1. non-standardize_k-means.py
-Implements the K-Means clustering algorithm without standardizing the data.
-Outputs the clustering results and performance metrics (Silhouette Score and Davies-Bouldin Index).
-Saves the clustered data as non-standardize_k-means_clustered_data.csv.
-2. standardize_k-means.py
-Implements the K-Means clustering algorithm with standardized data.
-Outputs the clustering results and performance metrics (Silhouette Score and Davies-Bouldin Index).
-Saves the clustered data as standardize_k-means_clustered_data.csv.
-3. dbscan.py
-Implements the DBSCAN clustering algorithm.
-Outputs the clustering results and performance metrics (Silhouette Score and Davies-Bouldin Index).
-Saves the clustered data as dbscan_clustered_data.csv.
-Datasets
-
-The data/ folder contains the following files:
-
-pricerunner_aggregate_2.csv: The original dataset used for clustering.
-non-standardize_k-means_clustered_data.csv: Clustered data from the non-standardized K-Means algorithm.
-standardize_k-means_clustered_data.csv: Clustered data from the standardized K-Means algorithm.
-dbscan_clustered_data.csv: Clustered data from the DBSCAN algorithm.
-Visualizations
-
-The images/ folder contains visualizations comparing the clustering results:
-
-k-means_non-standardized.png: Results of non-standardized K-Means clustering.
-k-means_standardize.png: Results of standardized K-Means clustering.
-dbscan.png: Results of DBSCAN clustering.
-non-standardize_k-means_vs_dbscan.png: Comparison of non-standardized K-Means and DBSCAN.
-non-standardize_vs_standardize.png: Comparison of non-standardized and standardized K-Means.
-standardize_k-means_vs_dbscan.png: Comparison of standardized K-Means and DBSCAN.
-How to Run the Scripts
-
-Run non-standardize K-Means:
-python non-standardize_k-means.py
-Modify file_path in the script to point to the dataset location.
-Modify output_file_path to specify the save location for clustered data.
-Run standardize K-Means:
-python standardize_k-means.py
-Modify file_path in the script to point to the dataset location.
-Modify output_file_path to specify the save location for clustered data.
-Run DBSCAN:
-python dbscan.py
-Modify file_path in the script to point to the dataset location.
-Modify output_file_path to specify the save location for clustered data.
-Key Insights
-
-K-Means Clustering
-Standardizing the data before applying K-Means improved clustering performance, as indicated by better Silhouette Scores and lower Davies-Bouldin Index values.
-Visualizations highlight clear differences in cluster separability between standardized and non-standardized data.
-DBSCAN Clustering
-DBSCAN effectively identifies noise points and clusters based on density.
-Requires careful tuning of eps and min_samples for optimal results.
-Compared to K-Means, DBSCAN is more robust to outliers but may struggle with high-dimensional data.
-Algorithm Comparison
-K-Means:
-Performs well with spherical clusters.
-Sensitive to scaling and outliers.
-DBSCAN:
-Excels in identifying arbitrary-shaped clusters.
-Robust to outliers but parameter-sensitive.
-Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request for any bug fixes, enhancements, or additional features.
+   git clone https://github.com/<your_username>/<repository_name>.git
+   cd <repository_name>
+2. Install dependencies:
+   '''bash
+   pip install -r requirements.txt
+   
